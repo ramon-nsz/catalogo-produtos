@@ -1,17 +1,27 @@
 import './styles/App.css';
+import { Routes, Route, Link } from 'react-router-dom';
+import QuemSomos from './QuemSomos';
+import PaginaInicial from './PaginaInicial'; // Importa o novo componente
 
 function App() {
   return (
     <div className="container">
-      <img src="/images/impactateste.png" alt="Logo Impacta" className="logo" width="150"/>
+      <img src="/images/impactateste.png" alt="Logo Impacta" className="logo" width="150" />
       <header className="catalog-header">
-        <h1>Testando os produtos</h1>
+        <h1>"Nome da Empresa"</h1>
         <ul className="product-list">
-          <li className="product-item">1 - 50$ <img src="/images/teste1.png" alt="1" width="50" /></li>
-          <li className="product-item">2 - 10$</li>
-          <li className="product-item">3 - 15$</li>
+          <li className="product-item">
+            <Link to="/">Página Inicial</Link>
+          </li>
+          <li className="product-item">
+            <Link to="/quem-somos">Quem somos?</Link>
+          </li>
         </ul>
       </header>
+      <Routes>
+        <Route path="/" element={<PaginaInicial />} /> {/* Usa o componente */}
+        <Route path="/quem-somos" element={<QuemSomos />} />
+      </Routes>
     </div>
   );
 }
