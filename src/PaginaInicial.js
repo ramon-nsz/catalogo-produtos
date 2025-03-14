@@ -4,7 +4,7 @@ function PaginaInicial() {
   return (
     <div>
       <h2>Bem-vindo à Página Inicial</h2>
-      <p>Qualquer mensagem</p>
+      <p></p>
     </div>
   );
 }

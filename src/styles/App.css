@@ -8,7 +8,9 @@
 
 .logo {
   display: block;
-  margin: 20px auto;
+  margin: 30px auto;
+  width: 300px; 
+  height: auto; 
 }
 
 .catalog-header {
